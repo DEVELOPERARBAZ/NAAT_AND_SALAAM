@@ -1,6 +1,6 @@
-import mustafaJaneRehmat from "../SALAAM/mustafa_jane_rehmat.js";
-import tumper_lakhon_salaam from "../SALAAM/tumper_lakhon_salaam.js";
-import jise_chaha_dar_pe_bulaliya from "../SALAAM/jise_chaha_dar_pe_bulaliya.js";
+import mustafaJaneRehmat from "./modules/SALAAM/mustafa_jane_rehmat.js";
+import tumper_lakhon_salaam from "./modules/SALAAM/tumper_lakhon_salaam.js";
+import jise_chaha_dar_pe_bulaliya from "./modules/SALAAM/jise_chaha_dar_pe_bulaliya.js";
 import renderSalaam from "./modules/renderSalaam.js";
 
 // Haqqani Talks Animation
