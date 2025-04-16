@@ -24,18 +24,25 @@ timeline.to(document.querySelector("#icon"), {
 });
 
 // output listing
-let salaamList = [
+export let salaamList = [
   { name: "MUSTAFA JANE REHMAT PE LAKHON SALAAM", content: mustafaJaneRehmat },
-  { name: "TUMPER LAKHON SALAAM", content: tumper_lakhon_salaam },
   { name: "JISE CHAHA DAR PE BULALIYA", content: jise_chaha_dar_pe_bulaliya },
+  { name: "TUMPER LAKHON SALAAM", content: tumper_lakhon_salaam },
 ];
-// output loading => salaam rendering
-const output = document.getElementById("output");
-const heading = document.querySelector("#output h1");
-// output.appendChild(renderSalaam(mustafaJaneRehmat, 5));
-// output.appendChild(renderSalaam(tumper_lakhon_salaam, 5));
-output.appendChild(renderSalaam(jise_chaha_dar_pe_bulaliya, 5));
-heading.innerHTML = salaamList[2].name;
+
+// onChange Handler
+var output = document.querySelector("#output");
+
+window.handleListChange = (value) => {
+  console.log(value);
+  output.innerHTML = null;
+  var h1 = document.createElement("h1");
+  h1.setAttribute("class", "headings");
+  h1.innerHTML = salaamList[value].name;
+  output.appendChild(h1);
+  output.appendChild(renderSalaam(salaamList[value].content, 5));
+};
+
 // output animation
 gsap.from(document.querySelectorAll("#output .boxes"), {
   y: -100,
@@ -46,4 +53,4 @@ gsap.from(document.querySelectorAll("#output .boxes"), {
 
 // search bar functionality
 const searchBar = document.getElementById("search-bar");
-console.log(searchBar.value);
+// console.log(searchBar.value);

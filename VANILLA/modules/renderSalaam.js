@@ -53,17 +53,17 @@ function renderSalaam(Salaam, lines) {
 
       var ashar = document.createElement("div");
 
-      // var checkbox = document.createElement("input");
-      // checkbox.setAttribute("class", `checkbox${i + 1}`);
-      // checkbox.setAttribute("type", `checkbox`);
-      // checkbox.setAttribute("data-id", `${i + 1}`);
-      // checkbox.setAttribute("name", `checkbox`);
+      var checkbox = document.createElement("input");
+      checkbox.setAttribute("class", `checkbox${i + 1}`);
+      checkbox.setAttribute("type", `checkbox`);
+      checkbox.setAttribute("data-id", `${i + 1}`);
+      checkbox.setAttribute("name", `checkbox`);
 
       ashar.setAttribute("id", `ashar${i + 1}`);
       ashar.setAttribute("class", `ashars`);
       ashar.innerText = Salaam[i].toUpperCase();
 
-      // ashar.appendChild(checkbox);
+      ashar.appendChild(checkbox);
       box.appendChild(ashar);
       output.appendChild(box);
     }

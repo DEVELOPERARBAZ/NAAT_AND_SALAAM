@@ -17,15 +17,28 @@
       </ul>
     </nav>
     <main>
-      <!-- <div class="highlight-text">سبحان الله وبحمده، سبحان الله العظيم</div> -->
-      <div id="search-bar">
+      <!-- <div id="search-bar">
         <input type="text" placeholder="Search..." value="" />
+        <button class="icon">🔍</button>
+      </div> -->
+
+      <div id="search-bar">
+        <input type="text" placeholder="See Our Suggested Kalaams..." />
+        <select
+          id="salaam-list"
+          name="salaam-list"
+          onchange="handleListChange(this.value)"
+        >
+          <option value="">See Here ...</option>
+          <option value="0">MUSTAFA JANE REHMAT PE LAKHON SALAAM</option>
+          <option value="1">JISE CHAHA DAR PE BULALIYA</option>
+          <option value="2">TUMPER LAKHON SALAAM</option>
+          <option value="">More Soon</option>
+        </select>
         <button class="icon">🔍</button>
       </div>
 
-      <div id="output">
-        <h1></h1>
-      </div>
+      <div id="output"></div>
     </main>
 
     <script
